@@ -1,0 +1,650 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  color: aliceblue;
+}
+
+.follower {
+  width: 5vw;
+  height: 5vw;
+  background: rgba(255, 255, 255, 0.1);
+  mix-blend-mode: difference;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.follower h6 {
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main .hero {
+  background-image: url(./img/hero.jpeg);
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 230vh;
+}
+.main .hero .nav {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+.main .hero .nav .logo .exo {
+  font-weight: 900;
+}
+.main .hero .nav .logo h2 {
+  font-size: 2vw;
+  font-weight: 500;
+}
+.main .hero .nav .logo span {
+  font-style: italic;
+  font-weight: 300;
+}
+.main .hero .nav .nav-content {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.main .hero .nav .nav-content a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+.main .hero .one {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: start;
+  margin-top: 25vw;
+  margin-left: 8vw;
+}
+.main .hero .one .one-para p {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.main .hero .two {
+  width: 80%;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: space-between;
+  margin-top: 8vw;
+  margin-left: 8vw;
+  align-items: center;
+}
+.main .hero .two .paragraph {
+  width: 50%;
+}
+.main .hero .two .paragraph p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.main .hero .two .information {
+  display: flex;
+  align-items: right;
+  width: 40%;
+  padding: 2vw;
+  justify-content: space-between;
+  height: 100%;
+}
+.main .hero .two .information .left h5 {
+  font-size: 2vw;
+  font-weight: 500;
+  cursor: pointer;
+}
+.main .hero .headings {
+  width: 100%;
+  margin-top: 5vw;
+}
+.main .hero .headings .heading {
+  margin-top: 0.2vw;
+  width: 80%;
+  margin-left: 8vw;
+}
+.main .hero .headings .heading h1 {
+  font-size: 15vw;
+  font-weight: 500;
+  line-height: 15vw;
+}
+.main .page-1 {
+  background-color: white;
+  width: 100%;
+  padding: 6vw;
+  line-height: 10vw;
+  margin-top: 10vw;
+}
+.main .page-1 h1 {
+  font-size: 14vw;
+  font-weight: 500;
+  color: black;
+}
+.main .page-2 {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 6vw;
+}
+.main .page-2 .img {
+  width: 38vw;
+  height: 50vw;
+  position: relative;
+  overflow: hidden;
+}
+.main .page-2 .img img,
+.main .page-2 .img video {
+  width: 100%;
+  height: 90%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.main .page-2 .text {
+  width: 30%;
+  margin-right: 10vw;
+}
+.main .page-2 .text p {
+  font-size: 1.4vw;
+  font-weight: 200;
+  color: black;
+  width: 100%;
+}
+.main .page-2 .text .img,
+.main .page-2 .text video {
+  width: 25vw;
+  height: 35vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-top: 10vw;
+}
+.main .bg-video {
+  opacity: 0;
+  z-index: 1;
+}
+.main .bg-image {
+  opacity: 1;
+  z-index: 2;
+}
+.main .page-3 {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 6vw;
+  height: 100vh;
+}
+.main .img {
+  width: 25vw;
+  height: 35vw;
+  position: relative;
+  overflow: hidden;
+  margin-right: 15vw;
+}
+.main .img img,
+.main .img video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.main .bg-video {
+  opacity: 0;
+  z-index: 1;
+}
+.main .bg-image {
+  opacity: 1;
+  z-index: 2;
+}
+.main .text {
+  width: 30%;
+  margin-right: 10vw;
+}
+.main .text p {
+  font-size: 1.4vw;
+  font-weight: 200;
+  color: black;
+  width: 100%;
+}
+.main .text img,
+.main .text video {
+  width: 20vw;
+  height: 35vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-top: 5vw;
+  margin-left: 5vw;
+}
+.main .page-4 {
+  width: 100%;
+  height: 120vh;
+  background-color: #070707;
+  padding: 4vw;
+  position: relative;
+  overflow: hidden;
+}
+.main .page-4 .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vw;
+  z-index: 100;
+}
+.main .page-4 .name h3 {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: white;
+}
+.main .page-4 .video {
+  width: 30vw;
+  height: 15vw;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  opacity: 0.5;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .page-4 .video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .page-4 .play {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.main .page-4 .play h1 {
+  font-size: 10vw;
+  font-weight: 500;
+  color: white;
+}
+.main .page-4 .reel {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  z-index: 100;
+  right: 20%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.main .page-4 .reel h1 {
+  font-size: 10vw;
+  font-weight: 500;
+  color: white;
+}
+.main .page-4 .exp {
+  width: 25%;
+  position: absolute;
+  bottom: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .page-4 .exp h3 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+.main .page-5 {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  padding: 5vw;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .page-5 .one-img {
+  width: 25vw;
+  height: 45vw;
+}
+.main .page-5 .one-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .page-5 .two-img {
+  width: 15vw;
+  height: 20vw;
+  position: absolute;
+  top: 10vw;
+  right: 27vw;
+}
+.main .page-5 .two-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .page-5 .three-img {
+  width: 27vw;
+  height: 18vw;
+  position: absolute;
+  top: 40vw;
+  left: 25vw;
+}
+.main .page-5 .three-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .page-5 .vid-1 {
+  width: 27vw;
+  height: 17vw;
+  position: absolute;
+  top: 17vw;
+  left: 17vw;
+}
+.main .page-5 .vid-1 video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .page-5 .vid-2 {
+  width: 27vw;
+  height: 27vw;
+  position: absolute;
+  top: 45vw;
+  right: 17vw;
+}
+.main .page-5 .vid-2 video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .page-6 {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 5vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .page-6 h1 {
+  font-size: 12vw;
+  width: 100%;
+  font-weight: 800;
+  color: black;
+  line-height: 12vw;
+  text-align: center;
+  white-space: nowrap;
+}
+.main .page-6 p {
+  font-size: 1.6vw;
+  font-weight: 300;
+  color: black;
+  width: 29%;
+  margin-top: 1vw;
+}
+.main .footer {
+  width: 100%;
+  height: 100vh;
+  background-color: #070707;
+  padding: 4vw;
+}
+.main .footer .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid wheat;
+}
+.main .footer .top .footer-text {
+  width: 25%;
+}
+.main .footer .top .footer-text h1 {
+  font-size: 12vw;
+  font-weight: 500;
+  color: wheat;
+  line-height: 10vw;
+}
+.main .footer .top .footer-text p {
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: wheat;
+  margin: 1.7vw;
+}
+.main .footer .top .footer-vdo {
+  width: 70%;
+}
+.main .footer .top .footer-vdo video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main .footer .bottom {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5vw;
+  padding: 2vw;
+}
+.main .footer .bottom .left {
+  line-height: 2vw;
+  color: wheat;
+  font-size: 1.2vw;
+}
+.main .footer .bottom img {
+  width: 6vw;
+  filter: invert(1) brightness(0.5);
+}
+@media (max-width: 786px) {
+  .main .hero {
+    height: 100vh;
+  }
+  .main .hero .nav {
+    width: 95%;
+  }
+  .main .hero .nav .logo h2 {
+    font-size: 4vw;
+  }
+  .main .hero .nav .nav-content {
+    width: 50%;
+  }
+  .main .hero .nav .nav-content a {
+    font-size: 0.6rem;
+  }
+  .main .hero .one {
+    width: 80%;
+  }
+  .main .hero .one .one-para p {
+    font-size: 3.3vw;
+  }
+  .main .hero .two {
+    margin-top: 40vw;
+    width: 80%;
+  }
+  .main .hero .two .paragraph {
+    width: 45%;
+  }
+  .main .hero .two .paragraph p {
+    font-size: 2vw;
+  }
+  .main .hero .two .information .left h5 {
+    font-size: 3vw;
+  }
+  .main .hero .two .information .right h5 {
+    font-size: 2vw;
+  }
+  .main .hero .headings {
+    margin-top: 20vw;
+  }
+  .main .page-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vw;
+  }
+  .main .page-1 h1 {
+    font-size: 20vw;
+    font-weight: 500;
+  }
+  .main .page-4 {
+    margin-top: 7vh;
+  }
+  .main .page-5 {
+    margin-top: 20vw;
+    height: 50vh;
+  }
+  .main .page-5 .one-img {
+    width: 45vw;
+    height: 75vw;
+    position: absolute;
+    top: 10vw;
+  }
+  .main .page-5 .two-img {
+    width: 25vw;
+    height: 30vw;
+    top: 15vw;
+  }
+  .main .page-5 .three-img {
+    width: 30vw;
+    height: 25vw;
+    top: 50vw;
+  }
+  .main .page-5 .vid-1 {
+    width: 30vw;
+    height: 20vw;
+  }
+  .main .page-5 .vid-2 {
+    top: 55vw;
+  }
+  .main .page-6 p {
+    font-size: 3.5vw;
+    width: 50%;
+    font-weight: 200;
+    opacity: 0.5;
+    margin-top: 1.5vw;
+  }
+  .main .footer {
+    height: 30vh;
+  }
+  .main .footer .top .footer-text {
+    width: 25%;
+  }
+  .main .footer .top .footer-text h1 {
+    font-size: 10vw;
+  }
+  .main .page-2 {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .main .page-2 .img {
+    width: 60vw;
+    height: 90vw;
+    margin-left: auto;
+  }
+  .main .page-2 .text {
+    margin-top: -20vw;
+  }
+  .main .page-2 .text p {
+    display: none;
+  }
+  .main .page-2 .text .img,
+  .main .page-2 .text video {
+    width: 65vw;
+    height: 100vw;
+    margin-left: 6vw;
+  }
+  .main .bg-video {
+    opacity: 1;
+  }
+  .main .bg-image {
+    opacity: 0;
+  }
+  .main .page-3 {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .main .page-3 .img {
+    width: 60vw;
+    height: 90vw;
+    margin-left: auto;
+  }
+  .main .page-3 .text {
+    margin-top: -20vw;
+  }
+  .main .page-3 .text p {
+    display: none;
+  }
+  .main .page-3 .text .img,
+  .main .page-3 .text video {
+    width: 65vw;
+    height: 100vw;
+    margin-left: 6vw;
+  }
+  .main .bg-video {
+    opacity: 1;
+  }
+  .main .bg-image {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
